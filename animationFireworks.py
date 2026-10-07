@@ -186,7 +186,7 @@ sparks = []
 
 def explode(x, y, hue):
     window.playExplosion()
-    shape = random.choice(['star', 'circle', 'heart'])
+    shape = random.choice(['star', 'circle',])
     burstDecay = random.uniform(0.008, 0.016)
 
     for i in range(100):
@@ -197,11 +197,6 @@ def explode(x, y, hue):
             x2, y2 = starPoints[(k + 1) % 10]
             vx = (x1 + (x2 - x1) * f) * 5
             vy = (y1 + (y2 - y1) * f) * 5
-            decay = burstDecay
-        elif shape == 'heart':
-            t = 6.28 * i / 100
-            vx = 16 * math.sin(t) ** 3 * 0.25
-            vy = -(13 * math.cos(t) - 5 * math.cos(2 * t) - 2 * math.cos(3 * t) - math.cos(4 * t)) * 0.25
             decay = burstDecay
         else:
             angle = random.uniform(0, 6.28)
