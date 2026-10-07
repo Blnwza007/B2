@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/brython@3.12.4/brython.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/brython@3.12.4/brython_stdlib.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body onload="brython()">
+  <button id="soundToggle" class="ui-button" type="button" aria-pressed="true">ปิดเสียง</button>
+
+  <main>
+    <h1 id="title" aria-label="Happy Birthday">Happy Birthday</h1>
+  </main>
+
+  <div id="card">
+    <p>สุขสันต์วันเกิดนะ<br>ก็กูต้องอวยพรถูกไหมหรือไม่ต้อง ก็ขอให้มีความสุขในทุกปีหลังจากนี้ สอบม.4ติดโรงเรียนที่อยากได้ ร่างกายแข็งแรง แมนยูมึงไม่ชนะหรอกทีมแม่งไม่ไหว แล้วก็หลังจากนี้ขอให้เจอแต่สิ่งดีๆสิ่งแย่ๆก็ไม่ต้องไปสนแม่งหรอก ขอให้มีความสุขกับ15นี้น่ะ คิดคำอวยพรแม่งยากกว่าเขียนโค้ดอีกจะบ้า หวังว่าจะชอบละกันทำนานอยู่น่ะ</p>
+    <button id="homeButton" class="ui-button" type="button">กลับหน้าแรก</button>
+  </div>
+
+  <div id="cakeWrap" aria-label="เค้กวันเกิด">
+    <svg viewBox="0 0 400 380" aria-label="เค้กวันเกิด">
+      <defs>
+        <linearGradient id="sponge" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#d9a066" />
+          <stop offset="0.5" stop-color="#f3cf9b" />
+          <stop offset="1" stop-color="#c98d55" />
+        </linearGradient>
+        <linearGradient id="cream" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#f4b6c8" />
+          <stop offset="0.45" stop-color="#ffe3ec" />
+          <stop offset="1" stop-color="#e79fb6" />
+        </linearGradient>
+        <linearGradient id="cream2" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ffeef3" />
+          <stop offset="0.5" stop-color="#fff" />
+          <stop offset="1" stop-color="#f6cfdb" />
+        </linearGradient>
+        <linearGradient id="wax" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#e8e8f0" />
+          <stop offset="0.4" stop-color="#fff" />
+          <stop offset="1" stop-color="#b9bccd" />
+        </linearGradient>
+        <radialGradient id="outer" cx="0.5" cy="0.75" r="0.6">
+          <stop offset="0" stop-color="#fff2b0" />
+          <stop offset="0.5" stop-color="#ffb52e" />
+          <stop offset="1" stop-color="#ff5a00" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="inner" cx="0.5" cy="0.8" r="0.6">
+          <stop offset="0" stop-color="#7fb0ff" />
+          <stop offset="0.35" stop-color="#fff" />
+          <stop offset="1" stop-color="#ffe9a0" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffc060" stop-opacity="0.55" />
+          <stop offset="1" stop-color="#ff8a00" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="room" cx="0.5" cy="0.4" r="0.7">
+          <stop offset="0" stop-color="#ffb347" stop-opacity="0.35" />
+          <stop offset="1" stop-color="#ff8a00" stop-opacity="0" />
+        </radialGradient>
+        <filter id="soft">
+          <feGaussianBlur stdDeviation="1.2" />
+        </filter>
+      </defs>
+
+      <ellipse id="room" cx="200" cy="170" rx="260" ry="220" fill="url(#room)" />
+      <ellipse cx="200" cy="344" rx="190" ry="26" fill="#000" opacity="0.45" filter="url(#soft)" />
+      <ellipse cx="200" cy="332" rx="180" ry="26" fill="#d9dbe6" />
+      <ellipse cx="200" cy="327" rx="180" ry="26" fill="#f7f8fc" />
+
+      <path d="M50 235 V312 C50 330 350 330 350 312 V235Z" fill="url(#cream)" />
+      <path d="M50 262 C100 278 150 262 200 270 C250 278 300 262 350 270 V280 C300 290 250 284 200 290 C150 296 100 284 50 282Z" fill="url(#sponge)" opacity="0.9" />
+      <ellipse cx="200" cy="235" rx="150" ry="30" fill="url(#cream2)" />
+      <path d="M50 235 C50 262 66 262 66 240 C66 270 86 270 86 242 C90 258 104 258 108 244 C112 278 134 278 136 246 C146 262 164 262 168 248 C174 284 196 284 198 250 C210 266 228 266 232 250 C238 276 258 276 262 248 C272 262 288 262 294 244 C298 270 318 270 320 242 C326 262 344 262 350 235 C320 266 80 266 50 235Z" fill="url(#cream2)" />
+
+      <path d="M95 168 V236 C95 252 305 252 305 236 V168Z" fill="url(#cream)" />
+      <path d="M95 198 C130 210 165 196 200 204 C235 212 270 196 305 204 V212 C270 222 235 214 200 220 C165 226 130 212 95 214Z" fill="url(#sponge)" opacity="0.9" />
+      <ellipse cx="200" cy="168" rx="105" ry="22" fill="url(#cream2)" />
+      <path d="M95 168 C95 190 108 190 108 172 C108 196 126 196 128 174 C134 190 150 190 154 176 C158 204 180 204 182 178 C192 192 208 192 214 178 C220 200 240 200 244 176 C252 190 268 190 272 174 C278 196 296 196 298 172 C302 186 305 184 305 168 C270 190 130 190 95 168Z" fill="url(#cream2)" />
+
+      <g id="dots"></g>
+      <g id="pearls" fill="#fff" opacity="0.95"></g>
+      <g id="candles"></g>
+    </svg>
+    <div id="hint">คลิกเพื่อเป่าเทียน</div>
+  </div>
+
+  <script type="text/python" src="animationFireworks.py"></script>
+</body>
+</html>
