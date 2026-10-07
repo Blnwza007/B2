@@ -223,7 +223,7 @@ def drawFireworks():
             alive.append(s)
 
         ctx.beginPath()
-        ctx.arc(s[0], s[1], 3, 0, 6.28)
+        ctx.arc(s[0], s[1], 2 if is_mobile else 3, 0, 6.28)
         ctx.fillStyle = f'hsla({s[5]}, 100%, 60%, {s[4]})'
         ctx.fill()
 
